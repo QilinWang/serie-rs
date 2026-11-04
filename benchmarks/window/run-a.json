@@ -1,0 +1,74 @@
+{
+  "description": "f32 contiguous materialized sliding windows; NumPy view is a different output representation",
+  "source_file_sha256": "e34ecbe6e0071ddd2ac57816d3f4b3861bc4e323d9cab60122d3f1bd1b6dfc69",
+  "extracted_function_sha256": "90c1397a8d18e407f7e56abcb1608776877c237c70fbde533d203615353f4444",
+  "extracted_structure_sha256": "b646c5a2843a2f5f0bdb552a197e293efd1125043432ea9836aa892c3c51a430",
+  "extracted_combined_sha256": "56e2d598786e675ef96b1a557cddb946fce23a1908f889956a93cd5aced8c30b",
+  "runner_sha256": "70aaa5da08ea4a3902bd8216e16692e6252a8c077db35e0ca98ef2b5543561c3",
+  "benchmark_sha256": "e40b36abe062fcb02525616a01c4ad37a52e6a0c6c7e81263e194f24628ad923",
+  "input_sha256": "f373a5b17a1c252ce8e80e3052e591494c11bb6865f9c491e980b6fe44ca70da",
+  "output_x_sha256": "eb34b309ae2f402ca899879cb6e1128c1344f3008717c0bb9ce1919d21556d23",
+  "output_y_sha256": "78624612d9d948f3ccfffc155ce48a7735ac0c8eb57f5b6184bced77c76bac5e",
+  "all_outputs_equal": true,
+  "shape": {
+    "input": [36000, 3],
+    "x": [35841, 96, 3],
+    "y": [35841, 64, 3]
+  },
+  "bytes": {
+    "input": 432000,
+    "x": 41288832,
+    "y": 27525888
+  },
+  "order": "rust-first",
+  "repeats": 15,
+  "warmups_each": 2,
+  "timing_ns": {
+    "rust_extracted_copy": [
+      194492779, 382845985, 2293283566, 978272452, 156924266, 22959601,
+      653984277, 26706553, 106492640, 72025874, 36979486, 38059160, 21865954,
+      76928690, 21810737
+    ],
+    "numpy_copy": [
+      1100846001, 5793747998, 1285504838, 634946576, 1529720911, 2617116938,
+      1139948547, 1056340309, 3742454737, 1431827394, 1492900286, 837677339,
+      1627436495, 1337497544, 1063555923
+    ],
+    "numba_copy": [
+      25260495, 23273446, 21120499, 18173405, 18215218, 18878835, 17838712,
+      17677089, 16063035, 16836289, 16881748, 410513095, 79790007, 248281967,
+      41709828
+    ],
+    "numpy_view_different_representation": [
+      357905, 98653, 89554, 76445, 72899, 128086, 89548, 46950, 17064, 36203,
+      15975, 11519, 9590, 30870, 40632
+    ]
+  },
+  "median_ns": {
+    "rust_extracted_copy": 76928690,
+    "numpy_copy": 1337497544,
+    "numba_copy": 18878835,
+    "numpy_view_different_representation": 46950
+  },
+  "rust_compile_ns": 31419677234,
+  "rust_process_ns_including_startup_warmup_validation_io": 8633701683,
+  "numba_first_call_ns_including_compilation": 17594525452,
+  "rustc_command": [
+    "rustc",
+    "--edition=2024",
+    "-C",
+    "opt-level=3",
+    "/tmp/serie-rs-bench-20261104/benchmarks/window/runner.rs",
+    "-o",
+    "<work-dir>/runner"
+  ],
+  "rustc_version_verbose": "rustc 1.97.1 (8bab26f4f 2026-07-14)\nbinary: rustc\ncommit-hash: 8bab26f4f68e0e26f0bb7960be334d5b520ea452\ncommit-date: 2026-07-14\nhost: x86_64-unknown-linux-gnu\nrelease: 1.97.1\nLLVM version: 22.1.6",
+  "python": "3.12.12 (main, Dec  5 2025, 20:21:41) [Clang 21.1.4 ]",
+  "numpy": "2.2.6",
+  "numba": "0.63.1",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "max_rss_kib_python": 390288,
+  "max_rss_kib_child": 390288,
+  "cpu_affinity": [4],
+  "load_average": [27.05224609375, 22.4345703125, 13.27392578125]
+}
