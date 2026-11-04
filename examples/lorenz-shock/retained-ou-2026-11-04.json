@@ -1,0 +1,18 @@
+{
+  "status": "retained test-named artifacts; exact producing build not established",
+  "test_name": "student_t3_bank_records_its_noise_law_in_metadata",
+  "file_sha256": [
+    "c656aafaff28b95ff3e17709ba04484406f4a8014aeb3eae1a80130cd3a94514",
+    "8823fb8b81a25948c6d726c926f82f93f0b55d387ae966bf3f52328a692308d5",
+    "304c6c1c49ebcc6506e0c533a9646574d39e908dd5bd66d6b7acdeb40752e55a"
+  ],
+  "clean_shape": [2, 25001, 1],
+  "clean_float32_bytes_sha256": "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+  "noise_shape": [3, 25001, 1],
+  "noise_float32_bytes_sha256": "cf8c9068c1fa42ce501b8142f9fe7509c7f4ccff327ba27cd4c1164f509e3397",
+  "payload_sha256": "d15f8fa13cb922ac6a5c4bf76b9d1ba3bbfbbf01b295ecee670bd8c1b9113d55",
+  "parsed_headers_equal": true,
+  "payload_bytes_equal": true,
+  "serialized_header_bytes_equal": false,
+  "python_loader_and_bank_rebuild": "passed for each retained file"
+}
