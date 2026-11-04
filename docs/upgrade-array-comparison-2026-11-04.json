@@ -1,0 +1,299 @@
+{
+  "lorenz-none": {
+    "clean": {
+      "shape": [1, 36000, 3],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "6cf906cd27be21ebdf228746322db747cebe70821328c61b38824bdbb19d0ac1",
+        "6cf906cd27be21ebdf228746322db747cebe70821328c61b38824bdbb19d0ac1",
+        "6cf906cd27be21ebdf228746322db747cebe70821328c61b38824bdbb19d0ac1"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noise": {
+      "shape": [8, 36000, 3],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c",
+        "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c",
+        "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noisy_sigma_0.1": {
+      "shape": [36000, 3],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "d77929ee38ff44fc9406edfbdd8df81d861ff65dc6a84d7c68c76e908085ee80",
+        "d77929ee38ff44fc9406edfbdd8df81d861ff65dc6a84d7c68c76e908085ee80",
+        "d77929ee38ff44fc9406edfbdd8df81d861ff65dc6a84d7c68c76e908085ee80"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "lorenz-param": {
+    "clean": {
+      "shape": [1, 36000, 3],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "fcb400585e744f30a8a2a6d7520c61bdfbb3d3b13bfd3905e9d319f0031f02d4",
+        "fcb400585e744f30a8a2a6d7520c61bdfbb3d3b13bfd3905e9d319f0031f02d4",
+        "fcb400585e744f30a8a2a6d7520c61bdfbb3d3b13bfd3905e9d319f0031f02d4"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noise": {
+      "shape": [8, 36000, 3],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c",
+        "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c",
+        "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noisy_sigma_0.1": {
+      "shape": [36000, 3],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "cc3d257edb3a86aea81366255b388774e94f9ccb9bc58a5b59af44aefc95ee17",
+        "cc3d257edb3a86aea81366255b388774e94f9ccb9bc58a5b59af44aefc95ee17",
+        "cc3d257edb3a86aea81366255b388774e94f9ccb9bc58a5b59af44aefc95ee17"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "ou-none": {
+    "clean": {
+      "shape": [1, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "7205bee891481718c7edd9f4842f55f6789c28738638aea4e63cef1f1a0a03be",
+        "7205bee891481718c7edd9f4842f55f6789c28738638aea4e63cef1f1a0a03be",
+        "7205bee891481718c7edd9f4842f55f6789c28738638aea4e63cef1f1a0a03be"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noise": {
+      "shape": [8, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "5ad4f75bc3891b6176b0d006ec7dfb079bc63e39553c570f5890aa815c760378",
+        "5ad4f75bc3891b6176b0d006ec7dfb079bc63e39553c570f5890aa815c760378",
+        "5ad4f75bc3891b6176b0d006ec7dfb079bc63e39553c570f5890aa815c760378"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noisy_sigma_0.1": {
+      "shape": [25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "3f639919f1e38ec4f09438a043fecbc3b1197c107acc7fd6759469d1db097b47",
+        "3f639919f1e38ec4f09438a043fecbc3b1197c107acc7fd6759469d1db097b47",
+        "3f639919f1e38ec4f09438a043fecbc3b1197c107acc7fd6759469d1db097b47"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "ou-contaminated": {
+    "clean": {
+      "shape": [2, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noise": {
+      "shape": [3, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "c4ed48d79f055b8210dc387b22fd5f046f3423b7411c155807096e0fffef367d",
+        "c4ed48d79f055b8210dc387b22fd5f046f3423b7411c155807096e0fffef367d",
+        "c4ed48d79f055b8210dc387b22fd5f046f3423b7411c155807096e0fffef367d"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "ou-laplace": {
+    "clean": {
+      "shape": [2, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noise": {
+      "shape": [3, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "eec2163928cbd6e530955b765c8e1247c217a499158fb4e4eafd8dc4f1e3d83c",
+        "eec2163928cbd6e530955b765c8e1247c217a499158fb4e4eafd8dc4f1e3d83c",
+        "eec2163928cbd6e530955b765c8e1247c217a499158fb4e4eafd8dc4f1e3d83c"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "ou-t3": {
+    "clean": {
+      "shape": [2, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8",
+        "ae3b5710e0683453183112ea9cabacb51b9541867d3aa88fd4a62e5805bb22f8"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "noise": {
+      "shape": [3, 25001, 1],
+      "dtype": "float32",
+      "sha256_by_stage": [
+        "cf8c9068c1fa42ce501b8142f9fe7509c7f4ccff327ba27cd4c1164f509e3397",
+        "cf8c9068c1fa42ce501b8142f9fe7509c7f4ccff327ba27cd4c1164f509e3397",
+        "cf8c9068c1fa42ce501b8142f9fe7509c7f4ccff327ba27cd4c1164f509e3397"
+      ],
+      "old_to_toolchain": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      },
+      "toolchain_to_dependencies": {
+        "changed_scalars": 0,
+        "max_abs_difference": 0.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  }
+}

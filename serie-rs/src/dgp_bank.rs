@@ -1311,6 +1311,18 @@ struct KnownMatrix {
     timesteps: usize,
 }
 
+// sha2 0.11 returns digest bytes without LowerHex; format the same lowercase
+// hexadecimal representation used by the historical fingerprint.
+#[cfg(feature = "known-bank")]
+fn lower_hex(bytes: &[u8]) -> String {
+    use std::fmt::Write as _;
+    let mut output = String::with_capacity(bytes.len() * 2);
+    for byte in bytes {
+        write!(&mut output, "{byte:02x}").expect("writing to a String cannot fail");
+    }
+    output
+}
+
 /// Read a prepared Arrow IPC file into numeric columns without a table engine.
 #[cfg(feature = "known-bank")]
 fn read_known_ipc(bytes: &[u8], date_column: Option<&str>) -> Fallible<KnownMatrix> {
@@ -1558,7 +1570,7 @@ fn generate_known_dgp_bank(
     // Python data_asset_fingerprint uses.
     let source_asset_sha = {
         use sha2::{Digest, Sha256};
-        format!("{:x}", Sha256::digest(&bytes))[..16].to_string()
+        lower_hex(Sha256::digest(&bytes).as_ref())[..16].to_string()
     };
 
     // Python reference: drop the named date column before numeric cleaning.
@@ -1707,6 +1719,12 @@ mod ar1_tests {
 
 #[cfg(test)]
 mod tests {
+    #[cfg(feature = "known-bank")]
+    #[test]
+    fn lower_hex_preserves_leading_zeroes_and_byte_order() {
+        assert_eq!(super::lower_hex(&[0x00, 0x0f, 0x10, 0xab, 0xff]), "000f10abff");
+    }
+
     use super::*;
 
     fn iid(noise_kind: NoiseKind) -> ObservationNoiseProcess {
@@ -2389,7 +2407,7 @@ mod tests {
         // The pin is sha256[:16] of the asset bytes the generator parsed.
         let expected_sha = {
             use sha2::{Digest, Sha256};
-            format!("{:x}", Sha256::digest(std::fs::read(&asset_path).unwrap()))[..16].to_string()
+            lower_hex(Sha256::digest(std::fs::read(&asset_path).unwrap()).as_ref())[..16].to_string()
         };
         assert_eq!(meta.get("source_asset_sha"), Some(&expected_sha));
         let trajectory_seeds: Vec<u64> = serde_json::from_str(meta.get("trajectory_draw_seeds").unwrap()).unwrap();
@@ -2499,7 +2517,7 @@ mod tests {
             for value in bank.clean().iter() {
                 hasher.update(value.to_le_bytes());
             }
-            assert_eq!(format!("{:x}", hasher.finalize()), expected_sha, "{source}");
+            assert_eq!(lower_hex(hasher.finalize().as_ref()), expected_sha, "{source}");
         }
 
         // Verify the same 40-value prefix without redistributing raw sensor values.
@@ -2515,7 +2533,7 @@ mod tests {
                 prefix_hasher.update(value.to_le_bytes());
             }
             assert_eq!(
-                format!("{:x}", prefix_hasher.finalize()),
+                lower_hex(prefix_hasher.finalize().as_ref()),
                 "f8436012e0942611b9dafa859f2d502e9a189e14fc8fe8d4b28672ff2e372e9e"
             );
             eprintln!("verified HuGaDB 40-value prefix digest");

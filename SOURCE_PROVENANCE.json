@@ -31,11 +31,17 @@
     "analysis_declarations/level0_geometry_ledger.json": "ccbbb5d43de63c6d1d03a5aca6cdeaf683c79f0086055f8de1dd1c51eba283c8",
     "analysis_declarations/level0b_path_covariance.json": "26585cb14c1728d91c433a9622c305c353703c321428a769c7db8ca42b29ffd8"
   },
+  "historical_recovery_lock_resolution": "Cargo offline reconciled the historical workspace lock for a standalone workspace. All resulting name/version/source/checksum entries occur in the historical lock, but the dependency closure lost 9 packages and seven packages have different dependency lists; this is not an identical historical build environment.",
   "license_layout": "The crate LICENSE is a byte-identical copy of the workspace-root LICENSE so Cargo and GitHub each receive the license.",
   "license_origin": "2026 owner-authored serie name-reservation package; MIT as declared by crate",
   "license_sha256": "c5be3b4a3520fb884af1ac30393df5ed0bbc38afa730199a57be17847b447389",
-  "lock_resolution": "Cargo offline reconciled the historical workspace lock for a standalone workspace. All resulting name/version/source/checksum entries occur in the historical lock, but the dependency closure lost 9 packages and seven packages have different dependency lists; this is not an identical historical build environment.",
+  "lock_resolution": "The standalone lock was updated against crates.io for the 2026-11-04 dependency upgrade; see the upgrade report for versions, validation and reproducibility scope. The earlier recovery lock and its provenance are preserved in historical_recovery_lock_resolution and pre_upgrade_standalone_lock_sha256.",
   "modified_files": {
+    "Cargo.toml": {
+      "archived_sha256": "d31c75b15ec74de8e1cbe2d55e3b25b93fb3167760c2cc6a437d696981e6d8a0",
+      "candidate_sha256": "d75444e2ff7b967fbc40e257cee7027d138a6c3ddaee284f31d68b085236079c",
+      "change": "Updated direct dependency version requirements for the 2026-11-04 upgrade; preserved the original nalgebra comment as a historical note."
+    },
     "src/controlled_linear.rs": {
       "archived_sha256": "76adc35ff157a965f39104854a1f8a5f130bad95a894b29d60ac0aff6ce83fa4",
       "candidate_sha256": "6523c283879515861d68d49307e14ef9a961a308fdcc1153af511b2a68ce6914",
@@ -43,12 +49,14 @@
     },
     "src/dgp_bank.rs": {
       "archived_sha256": "5414227c7a6c83242d1001991f25e5c113e2f1f0b499cbe8b63f08bd1e9b9ad4",
-      "candidate_sha256": "979bb00e57f80c4b61db0ba6f900780ea0665effe2522d4c5e80113eca103014",
-      "change": "In a known-data test only, replace 40 raw HuGaDB-derived f32 bit-pattern literals with SHA-256 of the same little-endian bits; retain the full-array digest assertion and report when the prefix check executes. Rustfmt also reflowed the file. No runtime numerical code changed."
+      "candidate_sha256": "51c729bdb092c6fe27ebbd6c747142c641aae6659ecf745726e303a26babac75",
+      "change": "In a known-data test only, replace 40 raw HuGaDB-derived f32 bit-pattern literals with SHA-256 of the same little-endian bits; retain the full-array digest assertion and report when the prefix check executes. Rustfmt also reflowed the file. No runtime numerical code changed. CHG 2026-11-04: retain the same digest input and lowercase hexadecimal text using byte-wise formatting required by sha2 0.11; add a leading-zero encoding test. Existing full-array and privacy-prefix pins are unchanged.",
+      "previous_candidate_sha256": "979bb00e57f80c4b61db0ba6f900780ea0665effe2522d4c5e80113eca103014"
     }
   },
-  "note": "Source and historic inputs were observed before and after copying. Archived src/lib.rs and src/stage_diag_cli.rs differ from the named historical revision. Test-only privacy and packaging-path changes are documented in modified_files.",
+  "note": "Source and historic inputs were observed before and after copying. Archived src/lib.rs and src/stage_diag_cli.rs differ from the named historical revision. Test-only privacy and packaging-path changes are documented in modified_files. CHG 2026-11-04: dependency and digest-formatting changes are recorded in modified_files; the earlier lock identity is retained separately.",
+  "pre_upgrade_standalone_lock_sha256": "b292f16a9d742d678b83c79653c36d91e14538d632c240ed4629555a7d3a665d",
   "source": "retired serie-rs archived crate; mixed historical snapshot",
   "source_revision_for_external_files": "2a9779ef5cea481284c9c4c4dbfb059b6098730c",
-  "standalone_lock_sha256": "b292f16a9d742d678b83c79653c36d91e14538d632c240ed4629555a7d3a665d"
+  "standalone_lock_sha256": "1bfd971f8d1f807fc316c696365188cff779623c971e86810425a97e91d70032"
 }

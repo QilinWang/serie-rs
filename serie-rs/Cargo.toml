@@ -21,32 +21,34 @@ exclude = [
 
 [dependencies]
 ndarray = "0.17.2"
+# Historical workspace note, before the 2026-11-04 upgrade:
 # LG-SSM exact discretization: matrix exponential (Van Loan block), Cholesky,
 # and 2-norm/singular values. Already resolved in the workspace lockfile
 # (0.34.2 via fern_post/fern_run -> normality/eqsolver), so no new resolution.
-nalgebra = { version = "0.34", default-features = false, features = ["std"] }
+# CHG: the standalone crate now uses 0.35.0; see the upgrade record.
+nalgebra = { version = "0.35.0", default-features = false, features = ["std"] }
 # Read and write the grouped `dgp_bank.safetensors` interchange artifact.
 safetensors = "0.8.0"
-serde_json = "1"
+serde_json = "1.0.154"
 # Lightweight Arrow reader plus content hash for prepared known-data bank
 # assets. Fern consumes this boundary without linking the staged data pipeline.
-arrow-array = { version = "56", optional = true }
-arrow-ipc = { version = "56", optional = true }
-sha2 = { version = "0.10", optional = true }
-csv = { version = "1", optional = true }
-rand = "0.10.0"
+arrow-array = { version = "60.1.0", optional = true }
+arrow-ipc = { version = "60.1.0", optional = true }
+sha2 = { version = "0.11.1", optional = true }
+csv = { version = "1.4.0", optional = true }
+rand = "0.10.3"
 rand_distr = "0.6.0"
-rand_pcg = "0.10.1"
-rayon = "1.11.0"
+rand_pcg = "0.10.2"
+rayon = "1.12.0"
 
 # Text diagnostics renderer only. Gated behind the `diagnostics` feature so a
 # consumer that needs only the data pipeline can drop its table dependencies.
 colored = { version = "3.1.1", optional = true }
-tabled = { version = "0.20.0", optional = true }
+tabled = { version = "0.22.0", optional = true }
 
 # The `serie-rs` CLI binary, gated behind the `cli` feature so a library-only
 # consumer (`default-features = false`) does not pull clap.
-clap = { version = "4.5", features = ["derive"], optional = true }
+clap = { version = "4.6.7", features = ["derive"], optional = true }
 
 [features]
 default = []
