@@ -1,0 +1,133 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1440"
+  height="480"
+  viewBox="0 0 1440 480"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Shock the system. Control the comparison.</title>
+  <desc id="desc">
+    Conceptual shock illustration and the staged paths from synthetic or loaded
+    data to noise, partitioning, and ready windows.
+  </desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101929" />
+      <stop offset="1" stop-color="#080e1a" />
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#56e8c2" />
+      <stop offset="1" stop-color="#9af5cf" />
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity=".05" />
+    </pattern>
+  </defs>
+  <rect width="1440" height="480" rx="20" fill="url(#background)" />
+  <rect width="1440" height="480" rx="20" fill="url(#grid)" />
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text
+      x="68"
+      y="74"
+      fill="#71e9c2"
+      font-size="18"
+      font-weight="700"
+      letter-spacing="3"
+    >
+      SERIE-RS / CONTROLLED DATA
+    </text>
+    <text x="68" y="139" fill="#f5f8fc" font-size="51" font-weight="750">
+      SHOCK THE SYSTEM.
+    </text>
+    <text x="68" y="199" fill="#a6b4c9" font-size="43" font-weight="650">
+      CONTROL THE COMPARISON.
+    </text>
+    <text x="70" y="241" fill="#9aaec3" font-size="21">
+      Change the dynamics. Reuse the noise draw.
+    </text>
+    <rect x="70" y="286" width="175" height="39" rx="19.5" fill="#163b39" />
+    <text x="91" y="312" fill="#83eac9" font-size="16" font-weight="700">
+      PARAMETER
+    </text>
+    <rect x="255" y="286" width="111" height="39" rx="19.5" fill="#163b39" />
+    <text x="277" y="312" fill="#83eac9" font-size="16" font-weight="700">
+      STATE
+    </text>
+    <rect x="376" y="286" width="181" height="39" rx="19.5" fill="#163b39" />
+    <text x="397" y="312" fill="#83eac9" font-size="16" font-weight="700">
+      TRAJECTORY
+    </text>
+    <text x="70" y="389" fill="#a8bbce" font-size="16" font-weight="700">
+      SYNTHETIC
+    </text>
+    <text x="70" y="416" fill="#a8bbce" font-size="16" font-weight="700">
+      LOAD → CLEAN
+    </text>
+    <path
+      d="M219 384H250V407H219M250 396H287"
+      stroke="#7793a5"
+      stroke-width="2"
+      fill="none"
+    />
+    <path d="M282 391l7 5-7 5" fill="none" stroke="#7793a5" stroke-width="2" />
+    <text x="303" y="402" fill="#e9f2f4" font-size="16" font-weight="700">
+      NOISE
+    </text>
+    <text x="375" y="402" fill="#7793a5" font-size="20">→</text>
+    <text x="408" y="402" fill="#e9f2f4" font-size="16" font-weight="700">
+      PARTITION
+    </text>
+    <text x="510" y="402" fill="#7793a5" font-size="20">→</text>
+    <text x="543" y="402" fill="#e9f2f4" font-size="16" font-weight="700">
+      WINDOWS
+    </text>
+    <rect
+      x="746"
+      y="73"
+      width="620"
+      height="334"
+      rx="17"
+      fill="#101f2c"
+      stroke="#365054"
+    />
+    <path
+      d="M787 128H1325M787 192H1325M787 256H1325M787 320H1325"
+      stroke="#ffffff"
+      stroke-opacity=".09"
+    />
+    <path
+      d="M787 352V110M787 352H1325"
+      fill="none"
+      stroke="#6a8190"
+      stroke-opacity=".55"
+    />
+    <path
+      d="M790 262 C812 237 826 212 851 222 S888 286 915 269 S950 196 975 207 S1008 269 1034 250 S1069 179 1097 190 S1137 258 1167 232 S1210 147 1235 170 S1282 225 1320 189"
+      fill="none"
+      stroke="#56e8c2"
+      stroke-opacity=".22"
+      stroke-width="14"
+    />
+    <path
+      d="M790 262 C812 237 826 212 851 222 S888 286 915 269 S950 196 975 207 S1008 269 1034 250 S1069 179 1097 190 S1137 258 1167 232 S1210 147 1235 170 S1282 225 1320 189"
+      fill="none"
+      stroke="url(#line)"
+      stroke-width="4"
+    />
+    <path
+      d="M1035 105V352"
+      stroke="#ffce75"
+      stroke-width="2"
+      stroke-dasharray="7 7"
+    />
+    <circle cx="1035" cy="250" r="8" fill="#ffce75" />
+    <rect x="1053" y="110" width="128" height="34" rx="17" fill="#523d25" />
+    <text x="1072" y="133" fill="#ffdc9b" font-size="15" font-weight="700">
+      SHOCK
+    </text>
+    <text x="790" y="385" fill="#829aa8" font-size="14">
+      CONCEPTUAL ILLUSTRATION · NOT AN EXPERIMENTAL RESULT
+    </text>
+  </g>
+</svg>
