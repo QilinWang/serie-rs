@@ -14,7 +14,7 @@ Controlled shocks. Paired noise. Composable time-series stages. Built in Rust.
 
 🧱 **Build in stages.** Generate synthetic data **or** load and clean existing data → inject noise → partition → prepare windows. [Explore the stages](serie-rs/src/)
 
-🚀 **Built for efficient data work.** Rust-native CLI, preallocated window buffers, and a separate Rayon-parallel windowing function. [See the implementation](serie-rs/src/stage_ready.rs)
+🚀 **Built for efficient data work.** Rust-native CLI, preallocated window buffers, and a separate Rayon-parallel windowing function. [See the implementation](serie-rs/src/stage_ready.rs) · [Rust / NumPy / Numba benchmark](benchmarks/window/)
 
 ## Try it
 
