@@ -8,7 +8,7 @@ Controlled shocks. Paired noise. Composable time-series stages. Built in Rust.
 
 **Real output:** one shock at step 12,599; the noise draws stay fixed. [Reproduce it](examples/lorenz-shock/)
 
-**9 system presets** · **3 shock types** on selected systems · **121/121** default-feature library tests
+**Rust 1.99.1** · **9 system presets** · **3 shock types** on selected systems · **121/121** default library tests
 
 ⚡ **Shock the system.** Change a parameter, kick the state, or splice a trajectory. Probe how forecasting behaves when the dynamics change. [See the presets](serie-rs/src/main.rs#L435)
 
@@ -18,7 +18,7 @@ Controlled shocks. Paired noise. Composable time-series stages. Built in Rust.
 
 🚀 **Built for efficient data work.** Rust-native CLI, preallocated window buffers, and a separate Rayon-parallel windowing function. [See the implementation](serie-rs/src/stage_ready.rs) · [Rust / NumPy / Numba benchmark](benchmarks/window/)
 
-📦 **Independently packaged.** 121 default library tests passed from the unpacked crate. [Verification details](docs/package-validation-2026-11-04.md)
+📦 **Independently packaged.** 121 default library tests passed from the unpacked crate. [Verification details](docs/upgrade-2026-11-04.md)
 
 ## Try it
 

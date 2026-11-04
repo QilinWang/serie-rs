@@ -1,5 +1,7 @@
 # Cargo package verification
 
+> Historical result under the pre-upgrade lock. See the [subsequent Rust and dependency upgrade](upgrade-2026-11-04.md) for current versions and verification.
+
 **A standalone `.crate` was built and tested locally.** This is a package
 verification, not a crates.io release or a claim about every feature and
 external dataset.

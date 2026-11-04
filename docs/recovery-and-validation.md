@@ -1,5 +1,7 @@
 # Recovery, validation & scope
 
+> This recovery record describes the original snapshot. See the [subsequent dependency upgrade](upgrade-2026-11-04.md) for current versions and verification.
+
 **Controlled time-series data, in Rust.** Build a trajectory, reuse a noise
 draw, and vary its scale to study how a forecasting evaluation responds.
 
