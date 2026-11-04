@@ -1,0 +1,43 @@
+{
+  "schema": "fern.declared_analysis.v1",
+  "analysis_schema": "fern.level0_geometry_ledger.v2",
+  "kind": "level0_geometry_ledger",
+  "generator": "fern_analysis.level0_geometry_ledger",
+  "implementation_sources": [
+    "python/fern_analysis/level0_geometry_ledger.py",
+    "python/fern_analysis/receipt.py"
+  ],
+  "parameters": {
+    "level0a": {
+      "state_transition": [[0.75, 0.20], [-0.10, 0.65]],
+      "process_covariance": [[0.040, 0.012], [0.012, 0.025]],
+      "endpoint_horizons": [1, 2, 4, 8]
+    },
+    "level0b": {
+      "scale_gain": 0.5,
+      "angle_gain": 0.4,
+      "one_step_actions": {
+        "zero": [0.0, 0.0],
+        "scale_plus": [0.5, 0.0],
+        "scale_minus": [-0.5, 0.0],
+        "rotate_plus": [0.0, 0.5],
+        "rotate_minus": [0.0, -0.5]
+      }
+    },
+    "reflection_control": "R=P",
+    "state_coordinate_partition": [[0], [1]],
+    "scope": "endpoint_state_marginal"
+  },
+  "evidence": {
+    "source": "artifacts",
+    "paths": [
+      "docs/programs/designs/2026-08-15-controlled-dynamics-oracle-contract.md"
+    ]
+  },
+  "promised_outputs": [
+    {
+      "path": "results/oracle_fixtures/level0_geometry_ledger.json",
+      "schema_id": "fern.level0_geometry_ledger.v2"
+    }
+  ]
+}

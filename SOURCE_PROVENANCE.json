@@ -1,0 +1,44 @@
+{
+  "files": {
+    "Cargo.toml": "d31c75b15ec74de8e1cbe2d55e3b25b93fb3167760c2cc6a437d696981e6d8a0",
+    "examples/lorenz_bench.rs": "fa0773af2dba5a6e39c5ca58e4592513528ae162a27766cc40d4100ac69bf9bd",
+    "src/controlled_linear.rs": "76adc35ff157a965f39104854a1f8a5f130bad95a894b29d60ac0aff6ce83fa4",
+    "src/controlled_ode.rs": "0179bba44b4444811351936d54f47d7faf3c3cc9c6c919deb38b58991564c35f",
+    "src/controlled_pendulum.rs": "28a6759585c74d2b02f3532e6c9bd0fc38d351b1534f2cf3bbac851b14a41f1f",
+    "src/dgp_bank.rs": "5414227c7a6c83242d1001991f25e5c113e2f1f0b499cbe8b63f08bd1e9b9ad4",
+    "src/draw_protocol.rs": "12871531324bc2de903964937b650a0c64353997c63958f4d678bf20ce247e23",
+    "src/lib.rs": "270da24b6b151b3cc222eff91fd940a209b8615b32612b03c8f5fad99fcd54d3",
+    "src/main.rs": "28298df6c550d1b8e7479abb57d128840a6813821d92c0cbdd4de05fd3b9cdbc",
+    "src/numeric_frame.rs": "78261219a2855e9f1402b673f1877a4d76d1ca869cf2c960b3679567b09a564f",
+    "src/stage_clean.rs": "54f857a2a59efad600d5049bb37f558bbf1ab31cbb7b35de6af5158f331e29d0",
+    "src/stage_diag_cli.rs": "0468cea25b44e0882b9d5188bb806071dfd7a3bf4b752f76965030ba807331d3",
+    "src/stage_diag_text.rs": "0d10e076c87027d0692b7437aeeb02a89983c332124b9ffad5d5e2da6b61c2fc",
+    "src/stage_generate.rs": "0b9b5737bcef25a16f2da685553d1f4ae5e7653e3cf84b75fe4e12b90094eb97",
+    "src/stage_load.rs": "7ed82b2419b6eac699032ceb15f1aee594ae7a563596eb6ddf78950eded921f4",
+    "src/stage_noise.rs": "f27b9d3f5f2bd2c18f697004710099f0095944a564afef7fc4b78ecf3f59a117",
+    "src/stage_params.rs": "a6d6cab29d4a0e6a58bd96a479c52565126edeee7ed4703aa113980b5dfe4573",
+    "src/stage_partition.rs": "71bb71040bfa42494d76e00e14e736a44a0b6481e16c7f667c17a7f2df8ab038",
+    "src/stage_ready.rs": "e34ecbe6e0071ddd2ac57816d3f4b3861bc4e323d9cab60122d3f1bd1b6dfc69",
+    "src/stage_synthetic.rs": "122ca11880b662316d09b34544c3b1593ed0eb5ad23139ae108bc1b2454417dd"
+  },
+  "fixture_layout": "Two byte-identical historical declarations live at workspace root, matching the unmodified Rust tests relative include paths.",
+  "historical_inputs": {
+    "Cargo.lock": "53228d8a20b51f0db350712904581e76f3e07c479d310233759a0eda76c55a25",
+    "analysis_declarations/level0_geometry_ledger.json": "ccbbb5d43de63c6d1d03a5aca6cdeaf683c79f0086055f8de1dd1c51eba283c8",
+    "analysis_declarations/level0b_path_covariance.json": "26585cb14c1728d91c433a9622c305c353703c321428a769c7db8ca42b29ffd8"
+  },
+  "license_origin": "2026 owner-authored serie name-reservation package; MIT as declared by crate",
+  "license_sha256": "c5be3b4a3520fb884af1ac30393df5ed0bbc38afa730199a57be17847b447389",
+  "lock_resolution": "Cargo offline reconciled the historical workspace lock for a standalone workspace. All resulting name/version/source/checksum entries occur in the historical lock, but the dependency closure lost 9 packages and seven packages have different dependency lists; this is not an identical historical build environment.",
+  "modified_files": {
+    "src/dgp_bank.rs": {
+      "archived_sha256": "5414227c7a6c83242d1001991f25e5c113e2f1f0b499cbe8b63f08bd1e9b9ad4",
+      "candidate_sha256": "979bb00e57f80c4b61db0ba6f900780ea0665effe2522d4c5e80113eca103014",
+      "change": "In a known-data test only, replace 40 raw HuGaDB-derived f32 bit-pattern literals with SHA-256 of the same little-endian bits; retain the full-array digest assertion and report when the prefix check executes. Rustfmt also reflowed the file. No runtime numerical code changed."
+    }
+  },
+  "note": "Source and historic inputs were observed before and after copying. Archived src/lib.rs and src/stage_diag_cli.rs differ from the named historical revision. The candidate has one disclosed test-only privacy change in src/dgp_bank.rs.",
+  "source": "retired serie-rs archived crate; mixed historical snapshot",
+  "source_revision_for_external_files": "2a9779ef5cea481284c9c4c4dbfb059b6098730c",
+  "standalone_lock_sha256": "b292f16a9d742d678b83c79653c36d91e14538d632c240ed4629555a7d3a665d"
+}

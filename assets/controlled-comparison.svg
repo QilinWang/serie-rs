@@ -1,0 +1,102 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1440"
+  height="390"
+  viewBox="0 0 1440 390"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Controlled time-series comparison</title>
+  <desc id="desc">
+    A trajectory and a noise draw combine with a chosen noise level to form an
+    observation.
+  </desc>
+  <rect width="1440" height="390" rx="18" fill="#f3f6f3" />
+  <text
+    x="62"
+    y="68"
+    font-family="Arial,sans-serif"
+    font-size="17"
+    font-weight="700"
+    letter-spacing="3"
+    fill="#33746e"
+  >
+    SERIE-RS / CONTROLLED DATA
+  </text>
+  <text
+    x="62"
+    y="128"
+    font-family="Arial,sans-serif"
+    font-size="43"
+    font-weight="700"
+    fill="#153432"
+  >
+    Change the noise level.
+  </text>
+  <text
+    x="62"
+    y="181"
+    font-family="Arial,sans-serif"
+    font-size="43"
+    font-weight="700"
+    fill="#153432"
+  >
+    Keep the comparison paired.
+  </text>
+  <text
+    x="62"
+    y="238"
+    font-family="Arial,sans-serif"
+    font-size="21"
+    fill="#4f6663"
+  >
+    One trajectory, one noise draw, multiple levels.
+  </text>
+  <text x="62" y="328" font-family="monospace" font-size="16" fill="#69817c">
+    AN EXPLANATORY DIAGRAM · NOT A MODEL FORECAST
+  </text>
+  <rect
+    x="812"
+    y="65"
+    width="560"
+    height="260"
+    rx="14"
+    fill="#ffffff"
+    stroke="#cbdad3"
+    stroke-width="2"
+  />
+  <text x="850" y="116" font-family="monospace" font-size="17" fill="#58736d">
+    OBSERVED TIME SERIES
+  </text>
+  <text x="850" y="186" font-family="monospace" font-size="28" fill="#153432">
+    clean + σ × noise
+  </text>
+  <line
+    x1="850"
+    y1="215"
+    x2="1332"
+    y2="215"
+    stroke="#dce9e2"
+    stroke-width="2"
+  />
+  <circle cx="862" cy="267" r="7" fill="#33746e" />
+  <text
+    x="883"
+    y="275"
+    font-family="Arial,sans-serif"
+    font-size="19"
+    fill="#31524e"
+  >
+    fixed inputs
+  </text>
+  <circle cx="1108" cy="267" r="7" fill="#c96f45" />
+  <text
+    x="1129"
+    y="275"
+    font-family="Arial,sans-serif"
+    font-size="19"
+    fill="#31524e"
+  >
+    vary σ
+  </text>
+</svg>

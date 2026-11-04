@@ -1,0 +1,42 @@
+{
+  "schema": "fern.declared_analysis.v1",
+  "analysis_schema": "fern.level0b_path_covariance.v1",
+  "kind": "level0b_path_covariance",
+  "generator": "fern_analysis.level0b_path_covariance",
+  "implementation_sources": [
+    "python/fern_analysis/level0b_path_covariance.py",
+    "python/fern_analysis/receipt.py",
+    "serie/controlled.py"
+  ],
+  "parameters": {
+    "scope": "joint_future_path_covariance",
+    "horizon": 8,
+    "sequence_count": 33,
+    "zero_action_sequence_index": 0,
+    "state_dimension": 2,
+    "state_transition": [[0.75, 0.20], [-0.10, 0.65]],
+    "action_response": [[0.50, -0.10], [0.20, 0.40]],
+    "process_covariance": [[0.040, 0.012], [0.012, 0.025]],
+    "initial_state": [0.40, -0.30],
+    "scale_gain": 0.5,
+    "angle_gain": 0.4,
+    "impulse_amplitude": 0.5,
+    "baseline": "constant_process_covariance_gaussian",
+    "matched": "exact_level0b_gaussian",
+    "trains_fern": false,
+    "fern_patch_width": 8,
+    "fern_block_axis": "timestep_major_per_channel"
+  },
+  "evidence": {
+    "source": "artifacts",
+    "paths": [
+      "docs/programs/designs/2026-08-15-controlled-dynamics-oracle-contract.md"
+    ]
+  },
+  "promised_outputs": [
+    {
+      "path": "results/oracle_fixtures/level0b_path_covariance.json",
+      "schema_id": "fern.level0b_path_covariance.v1"
+    }
+  ]
+}

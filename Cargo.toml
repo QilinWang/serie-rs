@@ -1,0 +1,3 @@
+[workspace]
+members = ["serie-rs"]
+resolver = "2"

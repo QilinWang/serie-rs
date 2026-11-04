@@ -1,0 +1,64 @@
+[package]
+name = "serie-rs"
+version = "0.1.0"
+edition = "2024"
+description = "Time-series evaluation data layer for clean sources, interventions, and noise titration."
+license = "MIT"
+authors = ["Qilin Wang"]
+keywords = ["time-series", "forecasting", "dynamical-systems", "robustness", "titration"]
+categories = ["science", "simulation"]
+readme = "README.md"
+repository = "https://github.com/qilinwang/serie-rs"
+exclude = [
+    "CLAUDE.md",
+    "agent.md",
+    "rtk_commands.md",
+    "soul.md",
+    "src/stages/**",
+    "src/*-reading-guide.md",
+]
+# `serie` is already taken on crates.io; this crate publishes as `serie-rs`.
+
+[dependencies]
+ndarray = "0.17.2"
+# LG-SSM exact discretization: matrix exponential (Van Loan block), Cholesky,
+# and 2-norm/singular values. Already resolved in the workspace lockfile
+# (0.34.2 via fern_post/fern_run -> normality/eqsolver), so no new resolution.
+nalgebra = { version = "0.34", default-features = false, features = ["std"] }
+# Read and write the grouped `dgp_bank.safetensors` interchange artifact.
+safetensors = "0.8.0"
+serde_json = "1"
+# Lightweight Arrow reader plus content hash for prepared known-data bank
+# assets. Fern consumes this boundary without linking the staged data pipeline.
+arrow-array = { version = "56", optional = true }
+arrow-ipc = { version = "56", optional = true }
+sha2 = { version = "0.10", optional = true }
+csv = { version = "1", optional = true }
+rand = "0.10.0"
+rand_distr = "0.6.0"
+rand_pcg = "0.10.1"
+rayon = "1.11.0"
+
+# Text diagnostics renderer only. Gated behind the `diagnostics` feature so a
+# consumer that needs only the data pipeline can drop its table dependencies.
+colored = { version = "3.1.1", optional = true }
+tabled = { version = "0.20.0", optional = true }
+
+# The `serie-rs` CLI binary, gated behind the `cli` feature so a library-only
+# consumer (`default-features = false`) does not pull clap.
+clap = { version = "4.5", features = ["derive"], optional = true }
+
+[features]
+default = []
+pipeline = ["known-bank"]
+known-bank = ["dep:arrow-array", "dep:arrow-ipc", "dep:sha2"]
+known-data = ["pipeline", "dep:csv"]
+diagnostics = ["pipeline", "dep:colored", "dep:tabled"]
+# The published binary is intentionally opt-in: library consumers get the
+# array/DGP core by default, while `--features cli` selects the complete
+# numeric stage pipeline, prepared known data, and text diagnostics.
+cli = ["dep:clap", "diagnostics", "known-data"]
+
+[[bin]]
+name = "serie-rs"
+required-features = ["cli"]
