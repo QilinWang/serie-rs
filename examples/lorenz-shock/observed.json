@@ -1,0 +1,42 @@
+{
+  "control_file_sha256": "eafe04892aff541aabbb3f56ca1d0332965c92c453eb663bd0a44f854bce9ce7",
+  "shock_file_sha256": "2b6db6abb1f9ff23cd88af5c75aefee9356036a9b39a41fbf59756e4efcf1c04",
+  "control_clean_sha256": "6cf906cd27be21ebdf228746322db747cebe70821328c61b38824bdbb19d0ac1",
+  "shock_clean_sha256": "fcb400585e744f30a8a2a6d7520c61bdfbb3d3b13bfd3905e9d319f0031f02d4",
+  "shared_noise_sha256": "978eaeea6172acbe1937c542aafbb643cc37c34c9088034c356976c57d4cbd6c",
+  "first_different_timestep_float32": 12599,
+  "event_step": 12599,
+  "prefix_bitwise_equal": true,
+  "noise_draws_bitwise_equal": true,
+  "noisy_values_match_float32_formula": true,
+  "clean_shape": [1, 36000, 3],
+  "noise_shape": [8, 36000, 3],
+  "control": {
+    "channels": 3,
+    "feature_names": ["f0", "f1", "f2"],
+    "n_noise_draws": 8,
+    "noise_seed": 1000,
+    "seed": 42,
+    "shock": "none",
+    "sigma": 0.1,
+    "system": "lorenz",
+    "timesteps": 36000
+  },
+  "shock": {
+    "channels": 3,
+    "feature_names": ["f0", "f1", "f2"],
+    "n_noise_draws": 8,
+    "noise_seed": 1000,
+    "seed": 42,
+    "shock": "param",
+    "sigma": 0.1,
+    "system": "lorenz",
+    "timesteps": 36000
+  },
+  "plot": {
+    "channel": 0,
+    "start_inclusive": 12300,
+    "stop_exclusive": 14100,
+    "stride": 2
+  }
+}

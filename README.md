@@ -4,7 +4,9 @@
 
 Controlled shocks. Paired noise. Composable time-series stages. Built in Rust.
 
-![A conceptual diagram of a time-series shock and the staged data pipeline.](assets/overview.svg)
+![Real Lorenz trajectories diverge after a parameter shock; both runs reuse the same noise draws.](assets/lorenz-parameter-shock.svg)
+
+**Real output:** one shock at step 12,599; the noise draws stay fixed. [Reproduce it](examples/lorenz-shock/)
 
 **9 system presets** · **3 shock types** on selected systems · **121/121** default-feature library tests
 
