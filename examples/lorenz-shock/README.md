@@ -50,7 +50,7 @@ contains only `schema`, `feature_names`, `system`, `seed`, and `noise_seed`.
 The richer `serie.api.dgp_bank_from_tensors` refuses it because required bank
 metadata, starting with `source_name`, is absent. The intervention selection is
 in the accompanying `manifest.json`, not the tensor header. Do not treat the
-CLI artifact as a fully reconstructible Python `DGPBank`.
+CLI artifact as a fully reconstructible Python `DGPBank`. [See the seed and metadata audit](../../docs/cli-data-bank.md).
 
 A separate observation used three retained, test-named OU + Student-t Rust
 artifacts from an earlier run of `generate_dgp_bank`. Python loaded each and

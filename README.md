@@ -18,6 +18,8 @@ Controlled shocks. Paired noise. Composable time-series stages. Built in Rust.
 
 🚀 **Built for efficient data work.** Rust-native CLI, preallocated window buffers, and a separate Rayon-parallel windowing function. [See the implementation](serie-rs/src/stage_ready.rs) · [Rust / NumPy / Numba benchmark](benchmarks/window/)
 
+📦 **Independently packaged.** 121 default library tests passed from the unpacked crate. [Verification details](docs/package-validation-2026-11-04.md)
+
 ## Try it
 
 ```sh
