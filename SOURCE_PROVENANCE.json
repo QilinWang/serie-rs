@@ -21,23 +21,33 @@
     "src/stage_ready.rs": "e34ecbe6e0071ddd2ac57816d3f4b3861bc4e323d9cab60122d3f1bd1b6dfc69",
     "src/stage_synthetic.rs": "122ca11880b662316d09b34544c3b1593ed0eb5ad23139ae108bc1b2454417dd"
   },
-  "fixture_layout": "Two byte-identical historical declarations live at workspace root, matching the unmodified Rust tests relative include paths.",
+  "fixture_current_paths": {
+    "analysis_declarations/level0_geometry_ledger.json": "serie-rs/analysis_declarations/level0_geometry_ledger.json",
+    "analysis_declarations/level0b_path_covariance.json": "serie-rs/analysis_declarations/level0b_path_covariance.json"
+  },
+  "fixture_layout": "Two byte-identical historical declarations moved from the workspace root into serie-rs/analysis_declarations for Cargo packaging; only their two test include paths changed.",
   "historical_inputs": {
     "Cargo.lock": "53228d8a20b51f0db350712904581e76f3e07c479d310233759a0eda76c55a25",
     "analysis_declarations/level0_geometry_ledger.json": "ccbbb5d43de63c6d1d03a5aca6cdeaf683c79f0086055f8de1dd1c51eba283c8",
     "analysis_declarations/level0b_path_covariance.json": "26585cb14c1728d91c433a9622c305c353703c321428a769c7db8ca42b29ffd8"
   },
+  "license_layout": "The crate LICENSE is a byte-identical copy of the workspace-root LICENSE so Cargo and GitHub each receive the license.",
   "license_origin": "2026 owner-authored serie name-reservation package; MIT as declared by crate",
   "license_sha256": "c5be3b4a3520fb884af1ac30393df5ed0bbc38afa730199a57be17847b447389",
   "lock_resolution": "Cargo offline reconciled the historical workspace lock for a standalone workspace. All resulting name/version/source/checksum entries occur in the historical lock, but the dependency closure lost 9 packages and seven packages have different dependency lists; this is not an identical historical build environment.",
   "modified_files": {
+    "src/controlled_linear.rs": {
+      "archived_sha256": "76adc35ff157a965f39104854a1f8a5f130bad95a894b29d60ac0aff6ce83fa4",
+      "candidate_sha256": "6523c283879515861d68d49307e14ef9a961a308fdcc1153af511b2a68ce6914",
+      "change": "Two test-only include_str paths updated after relocating the unchanged declaration files into the crate for Cargo packaging; no test assertions or runtime numerical code changed."
+    },
     "src/dgp_bank.rs": {
       "archived_sha256": "5414227c7a6c83242d1001991f25e5c113e2f1f0b499cbe8b63f08bd1e9b9ad4",
       "candidate_sha256": "979bb00e57f80c4b61db0ba6f900780ea0665effe2522d4c5e80113eca103014",
       "change": "In a known-data test only, replace 40 raw HuGaDB-derived f32 bit-pattern literals with SHA-256 of the same little-endian bits; retain the full-array digest assertion and report when the prefix check executes. Rustfmt also reflowed the file. No runtime numerical code changed."
     }
   },
-  "note": "Source and historic inputs were observed before and after copying. Archived src/lib.rs and src/stage_diag_cli.rs differ from the named historical revision. The candidate has one disclosed test-only privacy change in src/dgp_bank.rs.",
+  "note": "Source and historic inputs were observed before and after copying. Archived src/lib.rs and src/stage_diag_cli.rs differ from the named historical revision. Test-only privacy and packaging-path changes are documented in modified_files.",
   "source": "retired serie-rs archived crate; mixed historical snapshot",
   "source_revision_for_external_files": "2a9779ef5cea481284c9c4c4dbfb059b6098730c",
   "standalone_lock_sha256": "b292f16a9d742d678b83c79653c36d91e14538d632c240ed4629555a7d3a665d"

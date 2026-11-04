@@ -3159,7 +3159,7 @@ mod tests {
 
     #[test]
     fn level0_geometry_analysis_parameters_match_the_rust_canaries() {
-        const DECLARATION_JSON: &str = include_str!("../../analysis_declarations/level0_geometry_ledger.json");
+        const DECLARATION_JSON: &str = include_str!("../analysis_declarations/level0_geometry_ledger.json");
         let declaration: serde_json::Value = serde_json::from_str(DECLARATION_JSON).unwrap();
         let parameters = &declaration["parameters"];
         let state_transition = Level0ACanary::state_transition();
@@ -3204,7 +3204,7 @@ mod tests {
 
     #[test]
     fn level0b_path_covariance_declaration_matches_the_rust_canaries() {
-        const DECLARATION_JSON: &str = include_str!("../../analysis_declarations/level0b_path_covariance.json");
+        const DECLARATION_JSON: &str = include_str!("../analysis_declarations/level0b_path_covariance.json");
         let declaration: serde_json::Value = serde_json::from_str(DECLARATION_JSON).unwrap();
         let parameters = &declaration["parameters"];
         assert_eq!(parameters["scope"], "joint_future_path_covariance");
